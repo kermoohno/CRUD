@@ -23,6 +23,7 @@
                     <th>E-mail</th>
                     <th>First Name</th>
                     <th>Last Name</th>
+                    <th>Enabled</th>
                     <th></th>
                 </thead>
                 <tbody>
@@ -32,9 +33,10 @@
                             <td>[[${users.email}]]</td>
                             <td>[[${users.firstName}]]</td>
                             <td>[[${users.lastName}]]</td>
+                            <td>[[${users.enabled}]]</td>
                             <td>
-                                <a class="h4 me-3 text-decoration-none text-info" th:href="@{'/users/edit' + ${users.id}}">Edit</a>
-                                <a class="h4 text-decoration-none text-info" th:href="@{'/users/delete' + ${users.id}}">Delete</a>
+                                <a class="h4 me-3 text-decoration-none text-info" th:href="@{'/users/edit/' + ${users.id}}">Edit</a>
+                                <a class="h4 text-decoration-none text-info" th:href="@{'/users/delete/' + ${users.id}}">Delete</a>
                             </td>
                         </tr>
                     </th:block>
